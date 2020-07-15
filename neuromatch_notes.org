@@ -1,0 +1,24 @@
+#+STARTUP: entitiespretty
+
+* 20JUL14 Neuromatch Day 1 QnA
+- If all models are wrong, then there's no point to prove falsify models
+- if it is a bernouli proccess, the ISI is exponential; but the reverse is not true (i.e. if the ISI is exponential, it might not be due to a bernouli process)
+- the "typical" neuron is often not the most representative. It's the neuron that fit most well with theory that people read about.
+- asking representation questions ('what' models): you can't be sure that the input you give to the neuron are the correct features
+- neurons that don't respond the way we expect them to respond, we think are just noise -- this might not be correct
+- whenever we find that a neuron represents something, we give it a name and forget about the representative space hasn't been fully explored
+* 20JUL15 Neuromatch Day 2 QnA
+- just lumping everything unexplainable as noise is dishonest
+- you also need to account for noise, to point it to e.g. a random process (e.g. chemical processes, quantum fluctuations in the retina)
+- stochastic resonsance is one reason why noise might be helpful
+  - white noise in auditory system will help when noise is just below percetual threshold (stochastic facilitation)
+- noise is in built into the hardware/implementation; physics, molecules, flow of liquids (in vestibular systems) are noisy
+- variational autoencoders: increasing noise builds robustness into adverserial attacks
+- ensemble learning, deep learning, or gaussian processes are very flexible and don't require any knowledge about the system you are modelling; that might give you great predictions but not any understanding
+- what is a good r^2 values to publish? science is as much as sociological enterprize as it is a logical exercise. in some fields that always deal with noisy phenomenon or if the field is in its infancy, even low r^2 values is interesting.
+- How might we effectively use Occam's Razor to narrow down what models are considered "good" or valid in explaining relationships in the data - esp. in cases where it's not clear which models are "simpler"? Is there a more rigorous way of understanding which models make fewer assumptions?
+  - there's some theoretical work behind this; you might be able to do it exactly with generative models
+  - minimum prescription length: smallest possible pseudocode
+  - ensemble model comparisons
+  - this paper was mentioned here but not sure why: [[http://www.psy.vanderbilt.edu/courses/psy236/Motion/Motion.17March/Borst(NatNeuro2000).pdf][Models of motion detection by Alexander Borst]]
+- at some point, people trust the theory better than the data! e.g. HH model
