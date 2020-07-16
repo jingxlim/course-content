@@ -22,3 +22,11 @@
   - ensemble model comparisons
   - this paper was mentioned here but not sure why: [[http://www.psy.vanderbilt.edu/courses/psy236/Motion/Motion.17March/Borst(NatNeuro2000).pdf][Models of motion detection by Alexander Borst]]
 - at some point, people trust the theory better than the data! e.g. HH model
+* 20JUL15 Neuromatch Day 3 QnA
+- Cross validation, because of multiple splits has a lot of computational cost; AIC you just need to do one run
+- Cross validation, because of the splits, you also only use part of the training set
+- MLE is more flexible which can makes use of different structures of noise
+- MLE you need to write to write out explicitly, you need to say what the nosie to look like; MSE you don't have to make what could be an assumption
+- PCA is more similar to MSE in that it is maximizing variance, and there's no need to consider probabilities
+- bootstraping is problematic if you have a small dataset where there are not many ways to resample data
+- however, bootstraping doesn't make any assumptions
