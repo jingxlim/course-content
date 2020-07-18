@@ -1,5 +1,7 @@
 # W1D3 - Model Fitting
 
+NOTE: Not sure why, but the tutorials I completed are not in the Student folder, like in the other days. Instead, they are in the root folder.
+
 ## Instructor notebooks
 
 |   | Run | View |
