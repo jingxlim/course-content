@@ -1,5 +1,8 @@
 #+STARTUP: entitiespretty
 
+* General reflections
+- there's no one tool for one problem
+- practioners have preferences
 * 20JUL14 Neuromatch Day 1 QnA
 - If all models are wrong, then there's no point to prove falsify models
 - if it is a bernouli proccess, the ISI is exponential; but the reverse is not true (i.e. if the ISI is exponential, it might not be due to a bernouli process)
@@ -30,3 +33,44 @@
 - PCA is more similar to MSE in that it is maximizing variance, and there's no need to consider probabilities
 - bootstraping is problematic if you have a small dataset where there are not many ways to resample data
 - however, bootstraping doesn't make any assumptions
+* 20JUL16 Neuromatch Day 4 Outro
+- GLMs are not flexible enough to solve arbitrary nonlinear problems. For example, the Poisson-GLM was fixed to be log-linear.
+- However, this does not mean you shouldn't try it for nonlinear problems! Most nonlinaer problems have a large linear component. GLM is very practical. GLM will be able to predict most of it.
+- since it is linear, it's practical and very interpretable
+- you can also introduce nonlinear features
+* 20JUL16 Neuromatch Day 4 QnA
+- you typically first start with L2, unless you have aprior reason that L1 is better (e.g. not all neurons should encode some experimental parameter)
+- you have lots of non-linearity to choose from, but the nice property of having a convex solution might break
+- dimensionality reduction is applying a non-linear transformation to your feature space
+* 20JUL16 Neuromatch Day 5 QnA
+- dimensionality reduction can be used for visualization, denoising and can also be thought about a fundamental bnuilding block of cognition
+- Carsen stringer: t-sne and Umap is good for neural data
+- differnet methods have different requirements and make different assumptions
+- you can use PCs from one half of the data and project to the other half of the data to choose a cutoff for the number of PCs
+- how to choose perplexity?
+  - preservation of local and global distances
+  - e.g. check that if two neural acitivty are correlated, you want to see that these points are close together
+  - perplexity should scale with number of data points
+- intuition behind t-SNE: map correlation matrix to a 2D space, using a non-linear transformation
+  - this helps with keeping correlated neurons together
+  - initialisation is important; there's some stochasticity
+- Suite2P no longer does PCA first before NMF. It now bins the data first and then looks for sparse events.
+- ICA is based on the fact that you have the same signal with different amplitudes at various "sites"
+- every dimensionality reduction technique has its own definition about what is signal and what is noise
+- people use dimensionality reduction of neural activity as input to BCI, rarely do we use single neuron activity. Sara thinks that the brain uses ensembles for computation, not single neuron.
+- What are the open questions in the dimensionality reduction field?
+  - we don't know if there are  intrinsic dimensions to be discovered
+  - noisy data. as long as you don't know what the ground truth is, you won't know that your method is failing
+  - we don't know what is noise
+    - noise is something that we cannot explain
+    - noise is not correlated to anything else across the population
+- you can use trial averaged data to get your eigenvectors. you can then project your noisy trial data onto the trial average to do denoising.
+- isomap is able to recover curved surfaces (e.g. cinnamon roll, S-shaped)
+- How would you know if your data is nonlinear?
+  - make lots of 2D plots
+  - think about the external correlates
+  - look at the residuals
+- Advice:
+  - Sara: always plot your data, always start linear. wrong hypothesis will open other avenues for exploration.
+  - Byron: don't just take any off-the-shelf dimensionality reduction technique and apply it to your data. test your understanding of the technique with simulate data where you know the ground truth
+  - Carsen: there are other kinds of dimensionality reduction techqniues e.g. reduced rank regression -- shared dimensionality to an external correlate
