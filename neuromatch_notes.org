@@ -74,3 +74,19 @@
   - Sara: always plot your data, always start linear. wrong hypothesis will open other avenues for exploration.
   - Byron: don't just take any off-the-shelf dimensionality reduction technique and apply it to your data. test your understanding of the technique with simulate data where you know the ground truth
   - Carsen: there are other kinds of dimensionality reduction techqniues e.g. reduced rank regression -- shared dimensionality to an external correlate
+* 20JUL20 Neuromatch Day 6 QnA
+** If the Brain itself is Bayesian, why does Bayesian logic seem so unituitive? Why is it so difficult for people to understand probabilities?
+- type I and type II noise
+  - we might be very good making decision based on noisy data, but we  might not be able to say how confident we are about that decision
+  - just because the brain is good at something doesn't mean we know what's going on
+** Is the brain bayesian, is behavior bayesian, circuits can do bayesian things
+- the brain being able to code for uncertainty doesn't mean that the mechanism needs to be bayesian
+- the bayesian model being able to explain something well doesn't mean that the model is correct
+- Weiji Ma has interesting work comparing between models where he finds that the bayesian model is good, but there are better models that can predict behavior better -- and none of those should be thought of the ground truth
+** John Krakauer
+- you have some internal model of the world, and how do you reason and plan with this internal representation
+- distinguish the mathematical formulaism as a choice
+- don't confuse psychological entities (bad) and task variables
+** Konrad
+- one advantage of the bayesian model is that there's A LOT of literature about it (not every many models have that level of explanatory power)
+- another advantage: this is not a HOW model but can act as a bridge as to the mechanism behind our behaviors
