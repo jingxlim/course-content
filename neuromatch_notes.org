@@ -3,14 +3,14 @@
 * General reflections
 - there's no one tool for one problem
 - practioners have preferences
-* 20JUL14 Neuromatch Day 1 QnA
+* 20JUL14 Neuromatch Week 1 Day 1 QnA
 - If all models are wrong, then there's no point to prove falsify models
 - if it is a bernouli proccess, the ISI is exponential; but the reverse is not true (i.e. if the ISI is exponential, it might not be due to a bernouli process)
 - the "typical" neuron is often not the most representative. It's the neuron that fit most well with theory that people read about.
 - asking representation questions ('what' models): you can't be sure that the input you give to the neuron are the correct features
 - neurons that don't respond the way we expect them to respond, we think are just noise -- this might not be correct
 - whenever we find that a neuron represents something, we give it a name and forget about the representative space hasn't been fully explored
-* 20JUL15 Neuromatch Day 2 QnA
+* 20JUL15 Neuromatch Week 1 Day 2 QnA
 - just lumping everything unexplainable as noise is dishonest
 - you also need to account for noise, to point it to e.g. a random process (e.g. chemical processes, quantum fluctuations in the retina)
 - stochastic resonsance is one reason why noise might be helpful
@@ -25,7 +25,7 @@
   - ensemble model comparisons
   - this paper was mentioned here but not sure why: [[http://www.psy.vanderbilt.edu/courses/psy236/Motion/Motion.17March/Borst(NatNeuro2000).pdf][Models of motion detection by Alexander Borst]]
 - at some point, people trust the theory better than the data! e.g. HH model
-* 20JUL15 Neuromatch Day 3 QnA
+* 20JUL15 Neuromatch Week 1 Day 3 QnA
 - Cross validation, because of multiple splits has a lot of computational cost; AIC you just need to do one run
 - Cross validation, because of the splits, you also only use part of the training set
 - MLE is more flexible which can makes use of different structures of noise
@@ -33,16 +33,16 @@
 - PCA is more similar to MSE in that it is maximizing variance, and there's no need to consider probabilities
 - bootstraping is problematic if you have a small dataset where there are not many ways to resample data
 - however, bootstraping doesn't make any assumptions
-* 20JUL16 Neuromatch Day 4 Outro
+* 20JUL16 Neuromatch Week 1 Day 4 Outro
 - GLMs are not flexible enough to solve arbitrary nonlinear problems. For example, the Poisson-GLM was fixed to be log-linear.
 - However, this does not mean you shouldn't try it for nonlinear problems! Most nonlinaer problems have a large linear component. GLM is very practical. GLM will be able to predict most of it.
 - since it is linear, it's practical and very interpretable
 - you can also introduce nonlinear features
-* 20JUL16 Neuromatch Day 4 QnA
+* 20JUL16 Neuromatch Week 1 Day 4 QnA
 - you typically first start with L2, unless you have aprior reason that L1 is better (e.g. not all neurons should encode some experimental parameter)
 - you have lots of non-linearity to choose from, but the nice property of having a convex solution might break
 - dimensionality reduction is applying a non-linear transformation to your feature space
-* 20JUL16 Neuromatch Day 5 QnA
+* 20JUL16 Neuromatch Week 1 Day 5 QnA
 - dimensionality reduction can be used for visualization, denoising and can also be thought about a fundamental bnuilding block of cognition
 - Carsen stringer: t-sne and Umap is good for neural data
 - differnet methods have different requirements and make different assumptions
@@ -74,7 +74,7 @@
   - Sara: always plot your data, always start linear. wrong hypothesis will open other avenues for exploration.
   - Byron: don't just take any off-the-shelf dimensionality reduction technique and apply it to your data. test your understanding of the technique with simulate data where you know the ground truth
   - Carsen: there are other kinds of dimensionality reduction techqniues e.g. reduced rank regression -- shared dimensionality to an external correlate
-* 20JUL20 Neuromatch Day 6 QnA
+* 20JUL20 Neuromatch Week 2 Day 1 QnA
 ** If the Brain itself is Bayesian, why does Bayesian logic seem so unituitive? Why is it so difficult for people to understand probabilities?
 - type I and type II noise
   - we might be very good making decision based on noisy data, but we  might not be able to say how confident we are about that decision
@@ -90,3 +90,21 @@
 ** Konrad
 - one advantage of the bayesian model is that there's A LOT of literature about it (not every many models have that level of explanatory power)
 - another advantage: this is not a HOW model but can act as a bridge as to the mechanism behind our behaviors
+* 20JUL21 Neuromatch Week 2 Day 2 QnA
+- neurons are not linear, but with some small time period, the system can be approximated as a linear system
+- How do you know if a phenomena you observe is linear?
+- linear systems is not a model; it is a tool with which you could build models with
+- examples of linear systems: optimal feedback system control, decision making, integrate and fire, ring attractors that insect used for navigation
+- You can allow the A matrix to change over time, by a process. this is when you find out that a system can be described by a linear system in a local set of time, but not over long times
+- you can build a recurrent neural network as a linear system
+- if you find dependences and dependences on previous time points, you  can start from linear systems
+- linear models are the baseline we compare everything with. if it works well, why make it more complicated? always first consider a linear model.
+* 20JUL21 Neuromatch Week 2 Day 3 QnA
+- how many states?
+  - use cross validation
+  - be bayesian about it. infinite hidden markov model
+- the standard diffusion model has an upper and lower bound, but the brain implements it between a race between two drifts
+- if you are making 2 decisions at a time (what is the color and motion?), the brain does it serially and alernates; it doesn't it both at once
+- error trials: when you don't have enough information but still makes a decision. Michael Shadlen: the bounds close in across time.
+- even simple systems like sensory systems, it is inferring latent states about the physical world
+- knowledge is the consequence of interrogation
