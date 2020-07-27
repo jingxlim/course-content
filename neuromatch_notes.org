@@ -108,3 +108,55 @@
 - error trials: when you don't have enough information but still makes a decision. Michael Shadlen: the bounds close in across time.
 - even simple systems like sensory systems, it is inferring latent states about the physical world
 - knowledge is the consequence of interrogation
+* 20JUL21 Neuromatch Week 2 Day 4 QnA
+- you can think about control
+  - cognitive control
+  - control of BMI and prosthetics
+  - control of heartbeat, breathing etc
+- Bayesian statistics is an umbrella for sensory perception
+- Control is an umbrella for motor behavior
+- you can formalize a bellman equation not just for maximizing utility, but also for minimizing risk
+- whales and doplhins swim very differently than fish; there's no way know what's optimal without knowing your history
+- you can always construct a prior for sensory perception that makes the perception optimal, but the question is then whether the prior is good
+- people are starting to look for neural correlates of the variables in optimal motor control (e.g. gain might be in the synapses, muscle noise is process noise)
+- nystagmus and goldfish eye (goldman and seung)
+- Reza: control theory taught to medical students, and how disrupting one region might affect the resulting behavior, which can be explained by control theory. what the students got from it was that control theory is helpful for treating diseases
+- hierarchical latent states
+  - the brain might makes a model of a model it has, maybe that's why it is so deep
+  - stationarity of the environment is not always true. you might have a second latent states to learn from this change and make predictions about that.
+- Xaq's recommendations:
+  - Laurence Maloney (NYU) experiments about disentangling the uncertainty of one actions and the reward value (which doesn't change)
+  - John Doyle  Guaranteed margins of LQG Regulator. Read the abstract!
+* 20JUL21 Neuromatch Week 2 Day 5 QnA
+- reinforcement learning is trying to  address the normative framework, but RL is one of those frameworks that might be able to connect across levelts
+  - why agents learn the way we do? maximize reward
+  - what is the algorithm?
+  - how neural systems can implement those algorithms
+- Richard Sutton has a paper on RL as a stochastic optimal control theory
+- RL learn to act by trial and error, while in optimal control theory you are given a model
+- model based RL: models are learned and not described as a dynamical systems
+- There is a field of RL that doesn't concern an agennt. e.g. they are just trying to make stable systems
+- Also a lot of the math in RL comes from dynamical systems
+- there are a lot of things (e.g. one-shot learning) where humans still do better than AI and that we don't udnerstand very well, so there's an effort to make AI more human-like
+  - use human explanation of what they think they did
+  - perhaps why humans are not very good at any one task is because we are good at everything
+  - metalearning goes after the right goal of transference and composition
+- human like AI
+  - human like strategies
+  - human like mechanisms
+  - human like successes
+  - human like biases and failures
+- system 1: non-cognitive, system 2: cognitive, functions associated with consciousness
+- exploration can be model-free and model-based
+  - model free: serendipity
+  - model-based: maybe the agent is trying to discover the structure of the world (so this is intentional)
+  - model-based: curiousity based exploration
+  - model-based: entropy based exploration
+  - model-based: where in the world I look so that my RPE gets better
+  - noisy TV problem: initially RPE is high, good for explorer; but not good for optimizing because the slope is not going down (when maximizing reward)
+- metalearning of exploration strategies, active learning (what are the most representative samples; representative and diversity)
+- a lot of many things that are computed in graph theory can be applied in representational learning 
+- non-goal directed learning
+  - RL field: empowerment, how to change the world
+  - Habitual learning
+  - also, even if you think something is goal directed, it might not be
