@@ -99,7 +99,7 @@
 - you can build a recurrent neural network as a linear system
 - if you find dependences and dependences on previous time points, you  can start from linear systems
 - linear models are the baseline we compare everything with. if it works well, why make it more complicated? always first consider a linear model.
-* 20JUL21 Neuromatch Week 2 Day 3 QnA
+* 20JUL22 Neuromatch Week 2 Day 3 QnA
 - how many states?
   - use cross validation
   - be bayesian about it. infinite hidden markov model
@@ -108,7 +108,7 @@
 - error trials: when you don't have enough information but still makes a decision. Michael Shadlen: the bounds close in across time.
 - even simple systems like sensory systems, it is inferring latent states about the physical world
 - knowledge is the consequence of interrogation
-* 20JUL21 Neuromatch Week 2 Day 4 QnA
+* 20JUL23 Neuromatch Week 2 Day 4 QnA
 - you can think about control
   - cognitive control
   - control of BMI and prosthetics
@@ -127,7 +127,7 @@
 - Xaq's recommendations:
   - Laurence Maloney (NYU) experiments about disentangling the uncertainty of one actions and the reward value (which doesn't change)
   - John Doyle  Guaranteed margins of LQG Regulator. Read the abstract!
-* 20JUL21 Neuromatch Week 2 Day 5 QnA
+* 20JUL24 Neuromatch Week 2 Day 5 QnA
 - reinforcement learning is trying to  address the normative framework, but RL is one of those frameworks that might be able to connect across levelts
   - why agents learn the way we do? maximize reward
   - what is the algorithm?
@@ -160,3 +160,28 @@
   - RL field: empowerment, how to change the world
   - Habitual learning
   - also, even if you think something is goal directed, it might not be
+* 20JUL27 Neuromatch Week 3 Day 1 QnA
+- Failure mode: adding things to your models
+  - too complex: didn't learn anything
+  - too simple: cannot answer the question
+  - a model that reproduces the data doesn't necessarily means it is the right model
+- you use graded potentials in retina
+  - one reason might be because everything is so close together in the retina
+- action potentials
+  - saves a lot of power: power is only needed when you're generating AP, but nothing when you are not
+- the thing about biology is that it tries to be so many things at the same time
+  - you need to be energy efficient
+  - small
+  - etc
+- if you're trying to optimize energy constraints then why is there noise in the brain
+  - you don't really know what's noise or not, so you can't really say what you can't correlate with something of the external world is wasted
+  - in the retina, light has to pass through multiple layers of cells before hitting the photoreceptors (perhaps it is optimal in other ways, or it is just stuck in an evolutionary dead end)
+  - noise is useful to prevent you from local minima
+  - rhythms are a noise couteractor! there are noise all over the place, and so are the rhythms
+- why model dendrites? aren't they just more units, more "AI neurons", one more layer?
+  - spatial effects
+  - plasticity
+  - and other non-linearities
+- Blue Brain Project criticisms
+  - constraint the problem by thinking about the problem like an engineer. ask what the brain is trying to solve
+  - normative models is complementary to such large scales projects
