@@ -185,3 +185,16 @@
 - Blue Brain Project criticisms
   - constraint the problem by thinking about the problem like an engineer. ask what the brain is trying to solve
   - normative models is complementary to such large scales projects
+* TODO 20JUL28 Neuromatch Week 3 Day 2 QnA
+* 20JUL29 Neuromatch Week 3 Day 3 QnA
+- if you have feedback loops, time will be able to resolve them naturally
+- if we have two nodes, we can unroll in time, and say that we only have forward interactions (I'm not sure what this means)
+- if you expand notions of dependence to time frequencies; biology happens at different timescales, you might find that one direction is slower than the other (i.e. look at the other dimensions)
+* 20JUL30 Neuromatch Week 3 Day 4 QnA
+- can think of convolutional filters as receptive fields
+- filters are applied the same way across the whole image. however, neurons besides each other in the brain do not have the same properties.
+- you could probably do everything with rate code, but perhaps spiking is more efficient for some tasks
+- people don't really know why gradient descent is the best way to train weights; it's not the only way, but it works the best so far
+- neural networks are universal function approximators so they are likely able to learn any/all features
+- AlexNet is about the visual cortex, but it is also about decision. categorization is a decision!
+- AlexNet has no temporal information; it does not know what image came before
